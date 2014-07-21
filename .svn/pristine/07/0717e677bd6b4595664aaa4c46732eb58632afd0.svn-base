@@ -1,0 +1,226 @@
+/*
+	=====================================
+	project: Distinctive
+	author:  Luka Cvrk (www.solucija.com)
+	-------------------------------------
+	2009. Solucija
+	=====================================
+*/
+
+*{margin:0;padding:0}:focus,:active {outline:0}img{border: 0}
+body { font: .8em Arial, Tahoma, Verdana; background: #fff url(../images/bg.gif) repeat-x; color: #444; }
+a { text-decoration: none; color: #B00D0D; }
+h1 { font-size: 1.4em; font-weight: normal; }
+	h1 a { color: #fff; font-size: 1.6em; }
+h2 { font-size: 1.2em; color: #555; }
+h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x left bottom; padding: 6px 7px; color: #fff; font-weight: normal; margin: 0 0 15px; float: left; }
+h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
+h5 { font-size: 10pt; font-weight: normal; }
+p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
+.line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 45px; }
+.line_clear { clear: both; border-bottom: 1px solid #fff; margin: 0 0 45px 0px; }
+.clear { clear: both; }
+#content { width: 970px; margin: 0 auto; }
+	#top { color: #ccc; padding: 6px 20px 0; font-size: .84em; text-align: right; }
+	#logo { float: left; padding: 45px 25px 15px; margin: -44px 0 20px; }
+	/*background: url(../images/logo/fasilkom.png) no-repeat; */
+	
+/*	#logo { float: left; /*background: url(../images/redbg.gif) repeat-x; padding: 100px 25px 15px; margin: -46px 0 20px; }*/
+	#logo h1 a {  text-shadow: 1px 1px 2px #ccc; color: #c00f0f;/*#c00f0f;*/ margin-top: 100px; padding-top:500px; }
+	
+	/*#logo h1  a{ text-shadow: 2px 2px 3px #c6c6c6; color: #c00f0f; }*/
+	#menu { float: right; margin: 45px 20px 0; }
+		#menu li { display: inline; font-size: 1.3em; }
+			#menu li a { float: left; color: #808080; padding: 0 0 5px; margin: 50px 0 0 40px; }
+			#menu li a:hover, #menu li.current a, #menu li a:focus { color: #000; border-bottom: 1px solid #ddd; }
+			#menu li a:hover {visibility: inherit;}
+			#menu a{display:block;position:relative;padding:.75em 1em}
+			.nav li{position:relative;display:inline-block;zoom:1;*display:inline}
+	#pitch { /*background: url(../images/logo/fasilkom.png) no-repeat right top;*/
+	 background-position: 90% 10%;
+	 padding: 30px 0 0 0; border-bottom: 1px solid #ddd; height: 190px; margin: 0 0 35px; width: 100%; }
+		#pitch h1 { font-size: 2.6em; color: #000; margin: 0 0 20px; }
+		#pitch h2 { line-height: 1.5em; font-size: 1.4em; }
+	.left { float: left; width: 250px; }	
+	.right { float: right; width: 630px; margin: 0 0 20px; }
+		.right h3 { background: #808080; font-size: .84em; }
+	.third { float: left; width: 45%; margin: 0 40px 20px 0; }
+		.last { margin-right: 0; }
+	#footer { clear: both; font-size: .84em; border-top: 1px solid #ddd; padding: 20px 0 0; margin: 0; }
+	
+/** yasmin **/
+#content-column {
+	width: 70%;
+	float: left;
+	
+	padding-right: 3%;
+}
+#sidebar {
+	width: 20%;
+	float: right;
+	border-left: 1px solid #bbb;
+	padding-left: 20px;
+	font-size: 10pt;
+}
+#content-column-1 {
+	width: 50%;
+	float: left;
+	border-right: solid 1px #777;
+}
+#content-column-2 {
+	padding-left: 20px;
+	width: 60%;
+	float: left;
+}
+
+.columns {
+	-webkit-column-count: 2;
+    -webkit-column-rule: 0px;
+    -moz-column-count: 2;
+    -moz-column-rule: 0px;
+}
+
+#clear {
+	height: 80px;
+}
+.blankpicture {
+	
+	background: #ccc url(../images/slr.png);
+	width: 100px;
+	height: 100px;
+	border: 1px black;
+}
+
+.sidebar-nav {
+	font-size: 10pt;
+}
+.sidebar-nav li {padding-bottom: 5px; list-style: none;}
+.sidebar-nav li a { color: #444;}
+.sidebar-nav li a:hover, .sidebar-nav li a.current { color: #b20f0f;}
+
+#link a, #footer a {color: #B20F0F;}
+
+#column_t td{
+	padding: 10px;
+	padding-left: 20px;
+}
+
+.left_column{
+}
+#fasilkom_logo {
+	/*margin-left: 75px;*/
+	float: left;
+	margin-left: 5px;
+	/*margin-top: 50px;
+	margin-left: 35px;*/
+}
+
+#team li, #desc li{
+	margin-left: 20px;
+}
+
+
+#column_table td{
+	vertical-align: top;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.showcase {
+	float: left; width: 281px; margin: 0 40px 20px 0; border: 1px solid #fff;
+	height: 280px;
+}
+.showcase img { width: 90%; margin: 5% 5% auto;}
+.showcase h3 { background: transparent; color: #000; font-weight: bold; margin-left: 3%; text-shadow: 1px 1px #eee; 
+			font-size: 12pt; margin-top: 5px; margin-bottom: 5px;}
+.showcase p { margin: 5px 5px auto; margin: 0 5% 0 5%; padding-bottom: 5%; color: #444;}
+.showcase:hover{ background: #fefefe; border: 1px solid #ccc; border-radius: 5px;}
+.showcase img:hover {opacity: 0.8; }
+
+.crop{
+	margin:.5em 10px .5em 0;
+	overflow:hidden; /* this is important */
+	}
+	/* input values to crop the image: top, right, bottom, left */
+.crop img{
+	margin:3% 5% -285px 7%;
+	}
+
+.about {
+	width: 90%;
+	margin-bottom: 30px;
+}
+.about h3 {
+	font-size: 1.25em; 
+	padding: 0 0 7px 0; 
+	background: none;
+	color: #000; font-weight: bold; margin: 0 0 15px; float: left;
+	margin-top: -20px;
+	margin-bottom: 5px;
+}
+.about p {
+	
+	margin: 0 0 15px;
+}
+	
+/** css goodcook**/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+.wrapper {width:80%; overflow:hidden; position:relative;background-color: transparent;}
+.p3 {margin-bottom:30px;}
+.img-indent {float:left; margin:0 20px 0px 0;}	
+.extra-wrap {overflow:hidden;}
+.p1 {margin-bottom:8px;}
+.button-2,
+h1 a {text-decoration:none;}
+
+
+/** css elegant press */
+
+#nav-container,#breadcrumb,.container,.container1,.grid,footer,.callout .grid{
+	position:relative;display:block;width:960px;margin:0 auto
+}
+.nav,.nav *{list-style:none;margin:0;padding:0}
+.nav ul{position:absolute;top:-999em;width:10em}
+.nav ul li{width:100%}
+.nav li:hover{visibility:inherit}
+.nav li{position:relative;display:inline-block;zoom:1;*display:inline}
+.nav a{display:block;position:relative;color:#333;text-decoration:none;padding:.75em 1em}
+.nav li:hover ul,.nav li.sfHover ul{left:0;top:2.5em;z-index:99}
+.nav a,.nav a:visited,.nav li.active li a{color:#333}
+.nav a.sf-with-ul{padding-right:2.25em}
+.nav li ul a.sf-with-ul{padding-right:1em}
+
+	
+#menu4 { float: right; margin: 63px 20px 0; color: #777 }
+#menu4 *{list-style:none;margin:0;padding:0}
+#menu4 ul{position:absolute;top:-999em;width:10em}
+#menu4 ul li{width:100%}
+#menu4 li:hover{visibility:inherit;}
+#menu4 li{position:relative;display:inline-block;zoom:1;*display:inline;font-size: 1.3em;}
+#menu4 a{display:block;position:relative;color:#777;text-decoration:none;padding:.75em 1em}
+#menu4 li ul li a{font-size:12pt; background-color: #fff; padding:10px 5px 5px 15px}
+#menu4 li a {margin: 0 0 0 10px;}
+#menu4 li a ul li a:first-child{padding-top:10px; color: #00a}
+#menu4 li a:hover, #menu4 li.current a,#menu4 li a:focus { color: #000;border-bottom: 1px solid #ddd;}
+#menu4 li:hover ul,#menu4 li.sfHover ul{left:0;top:2.5em;z-index:99}
+/*#menu4 li.current li a{color:#333}*/
+#menu4 a.sf-with-ul{padding-right:2.25em}
+#menu4 li ul a.sf-with-ul{padding-right:1em}
+
+#contactperson {
+	padding-bottom: 15px;
+	padding-left:2px;
+}
+
+#contactperson img {
+	margin-bottom: -2px;
+}

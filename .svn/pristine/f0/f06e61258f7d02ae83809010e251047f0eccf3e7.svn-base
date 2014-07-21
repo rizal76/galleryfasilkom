@@ -1,0 +1,58 @@
+		<a class="showcase" href="<?php echo site_url('games/tap_the_beat');?>">
+			<figure class="crop">
+				<img src="<?php echo base_url();?>resource/images/games/tap_the_beat/screen logo.jpg" style="margin-bottom: -145px;"/>
+			</figure>
+			<h3>Tap The Beat</h3>
+			<p>Tap The Beat is an Android game. The goal of this game is to make the player, who is an amateur musician, to become a world-renowned one.</p>
+		</a>
+		<a class="showcase" href="<?php echo site_url('games/room_of_disaster');?>" >
+			<figure class="crop">
+				<img src="<?php echo base_url();?>resource/images/Nokia/Room of Disaster/ss2.png" style="margin-bottom: -120px;"/>
+			</figure>
+			<h3>Room of Disaster</h3>
+			<p>Room of Disaster is a match-making game that combine education and entertainment in one package.</p>
+		</a>
+		<a class="showcase last" href="<?php echo site_url('games/animal_learning');?>">
+			<figure class="crop">
+				<img src="<?php echo base_url();?>resource/images/Nokia/Animal Learning/ss3.jpg" style="margin-bottom: -120px;"/>
+			</figure>
+			<h3>Animal Learning</h3>
+			<p>This application allow the user to learn animals come from around the world.</p>
+		</a>
+		
+		<a class="showcase" href="<?php echo site_url('games/think_thing');?>">
+			<figure class="crop">
+				<img src="<?php echo base_url();?>resource/images/Nokia/Think Thing/ss3.jpg" style="margin-bottom: -120px;"/>
+			</figure>
+			<h3>Think Thing</h3>
+			<p>Think Thing is a children educational game that introduce many kind of objects around the surrounding.</p>
+		</a>
+		<a class="showcase" href="<?php echo site_url('games/world_word_challenge');?>" >
+			<figure class="crop">
+				<img src="<?php echo base_url();?>resource/images/Nokia/World Word Challenge/ss1.png" style="margin-bottom: -120px;"/>
+			</figure>
+			<h3>World Word Challenge</h3>
+			<p>This is an educational game about world. Content of the game is the name of the countries, capital cities, and national flags.</p>
+		</a>
+		
+		<!--<div class="line"></div>-->
+		<!--
+		<div class="left">
+			<h4>Join the Movement</h4>
+			<p><em>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+		</div>
+		<div class="right">
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+			<br />
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+		</div>
+		
+		<footer id="footer">
+			<p>&copy; Copyright 2009 Distinctive &minus; Design: Luka Cvrk, <a href="http://www.solucija.com" title="Free CSS Templates">Solucija</a></p>
+		</footer>	
+	</div>
+</body>
+</html>
+-->

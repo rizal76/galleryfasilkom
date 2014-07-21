@@ -1,0 +1,6 @@
+Menambahkan aplikasi Sterile Inbox
+--This line, and those below, will be ignored--
+
+M    application/views/apps/sidebar.php
+M    application/views/apps.php
+M    application/controllers/apps.php

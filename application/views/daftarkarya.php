@@ -1,5 +1,6 @@
 <?php
-//hapus jika di develope
+//hapus jika di developer
+if(isset($pesan))
  echo $pesan;
 //echo $apaini;
 // echo $video;

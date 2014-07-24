@@ -4351,3 +4351,43 @@ AA49 .<= ''
 90C9 .|    |    user was already authenticated, no need to look for tickets [Client.php:1206]
 90C9 .|    <= true
 90C9 .<= true
+ABDE .START phpCAS-1.3.2 ****************** [CAS.php:450]
+ABDE .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+ABDE .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+ABDE .|    |    Starting a new session [Client.php:792]
+ABDE .|    <= ''
+ABDE .<= ''
+ABDE .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+ABDE .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+ABDE .<= ''
+ABDE .=> phpCAS::forceAuthentication() [Cas.php:73]
+ABDE .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+ABDE .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+ABDE .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+ABDE .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+ABDE .|    |    |    <= true
+ABDE .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+ABDE .|    |    <= true
+ABDE .|    |    no need to authenticate [Client.php:1085]
+ABDE .|    <= true
+ABDE .<= ''
+8859 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+8859 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+8859 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+8859 .|    |    Starting a new session [Client.php:792]
+8859 .|    <= ''
+8859 .<= ''
+8859 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+8859 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+8859 .<= ''
+8859 .=> phpCAS::forceAuthentication() [Cas.php:73]
+8859 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+8859 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+8859 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+8859 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+8859 .|    |    |    <= true
+8859 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+8859 .|    |    <= true
+8859 .|    |    no need to authenticate [Client.php:1085]
+8859 .|    <= true
+8859 .<= ''

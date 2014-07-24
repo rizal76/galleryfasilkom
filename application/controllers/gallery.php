@@ -26,7 +26,12 @@ class Gallery extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('cas');
+    	$this->cas->force_auth();
+		$user = $this->cas->user();
+	
 		$data['menu'] = 'home';
+		$data['user'] = $user;
 		$this->load->view('header', $data);
 		$this->load->view('home');
 		$this->load->view('footer');
@@ -53,15 +58,44 @@ class Gallery extends CI_Controller {
 		$this->load->view('apps');
 	}
 
+	public function protect_admin(){
+		//protect admin
+		$this->load->library('cas');
+   		$this->cas->force_auth_admin();
+	}
+	public function protect(){
+		//protect admin
+		$this->load->library('cas');
+   		$this->cas->force_auth();
+	}
+
 	public function daftarKarya(){
+		$this->protect();
 		$data['menu'] = 'daftarKarya';
 		$this->load->view('header', $data);
 		$this->load->view('daftarkarya');
 		$this->load->view('footer');
 	}
 
+
+
+	public function admin(){
+		
+		$this->protect_admin();
+		$data['admin']='admin';
+		$this->load->view('header', $data);
+		$this->load->view('admin', $data);
+		$this->load->view('footer');
+
+	}
+
 	public function addKarya(){
-		//validasi
+		//validasi here
+
+
+		//protect with cas
+		$this->protect();
+	
 		//masukan semua attribut ke file csv
 		$nama_unik = $this->input->post('element_1');
 		$email = $this->input->post('element_2');
@@ -80,9 +114,8 @@ class Gallery extends CI_Controller {
 	            $config['max_size'] = '100';
 	            $config['max_width']  = '1024';
 	            $config['max_height']  = '768';
-	 
+
 	            $this->upload->initialize($config);
-	 
 	            foreach($_FILES as $field => $file)
 	            {
 	                // No problems with the file
@@ -101,6 +134,8 @@ class Gallery extends CI_Controller {
 	            }
 
 			$anggotaTim  = $this->input->post('element_9');
+			$submissionFor = $this->input->post('element_91');
+			$namaTim = $this->input->post('element_92');
 			$more = $this->input->post('element_10');
 			$cp = $this->input->post('element_11');
 			$jenisKarya = $this->input->post('element_12');
@@ -108,7 +143,7 @@ class Gallery extends CI_Controller {
 
 			//UNTUK WRITE FILE PENDING OKE
 			$filename = 'resource/csv/karyaPending.csv';
-			$somecontent = "0,".$jenisKarya.",".$nama_unik.",".$email.",".$judul.",".$tanggal.",".$video.",".$deskripsi.",".$deskripsi_singkat.",".$anggotaTim.",".$more.",".$cp."\n";
+			$somecontent = "0,".$jenisKarya.",".$nama_unik.",".$email.",".$judul.",".$tanggal.",".$video.",".$deskripsi.",".$deskripsi_singkat.",".$submissionFor.",".$namaTim.",".$anggotaTim.",".$more.",".$cp."\n";
 			
 			// Let's make sure the file exists and is writable first.
 			if (is_writable($filename)) {
@@ -139,6 +174,8 @@ class Gallery extends CI_Controller {
 	}
 
 	public function approveKarya($nama_unik){
+		$this->protect_admin();
+		
 		//membaca setiap attribute karya dengan nama unik
 		$handle = fopen("resource/csv/karyaPending.csv", "r");
 		if ($handle) {
@@ -157,6 +194,8 @@ class Gallery extends CI_Controller {
 	}
 
 	public function approveKaryaNext($karya){
+		$this->protect_admin();
+		
 		//inisialisasi variable
 		$controller = $karya[1];
 		$nama_unik = $karya[2];
@@ -174,7 +213,7 @@ class Gallery extends CI_Controller {
 		//1. menambahkan fungsi baru ke controller sesuai dengan jenis karya
 		$direktori = "application/controllers/".$controller.".php";
 		$pointer ="//new function here";
-		$content = "\tpublic function ".$nama_unik."() \n\t{\n";
+		$content = "//".$nama_unik."\n\tpublic function ".$nama_unik."() \n\t{\n";
 		$content .= "\t\t\$data[\"menu\"] = \"".$controller."\";\n";
 		$content .= "\t\t\$data[\"sidebar\"] = \"".$nama_unik."\";\n";			
 		$content .= "\t\t\$data[\"isIntermediary\"] = FALSE;\n";				
@@ -183,7 +222,7 @@ class Gallery extends CI_Controller {
 		$content .= "\t\t\$this->load->view(\"".$controller."/".$nama_unik."\");\n";	
 		$content .= "\t\t\$this->load->view(\"".$controller."/sidebar\");\n";
 		$content .= "\t\t\$this->load->view(\"footer\");\n";
-		$content .= "\t}\n\n";
+		$content .= "\t}\n\n//".$nama_unik."\n";
 		$content .= $pointer;
 		$pesan ="okee empty";
 		$this->changeFile($direktori,$content,$pointer);
@@ -191,7 +230,7 @@ class Gallery extends CI_Controller {
 		//2. Ubah sidebar diview  sesuai dengan jenis karya
 		$direktori = "application/views/".$controller."/sidebar.php";
 		$pointer ="<!--new code here-->";
-		$content = "<li><a <?php if (\$sidebar == '{$nama_unik}') { ?> class=\"current\" <?php } ?> href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">{$judul}<a></li>\n\t\t\t".$pointer;
+		$content = "<!--".$nama_unik."-->\n\t\t\t<li><a <?php if (\$sidebar == '{$nama_unik}') { ?> class=\"current\" <?php } ?> href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">{$judul}<a></li>\n\t\t\t<!--".$nama_unik."-->\n\t\t\t".$pointer;
 		$this->changeFile($direktori,$content,$pointer);
 		
 		//3.  Buat view dari template
@@ -231,16 +270,27 @@ class Gallery extends CI_Controller {
 		//4. add show case di setiap view sesuai dengan jenis karya
 		$direktori = "application/views/".$controller.".php";
 		$pointer ="<!--new code here-->";
-		$content = "<a class=\"showcase\" href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">\n";
+		$content = "<!--".$nama_unik."-->\n\t\t<a class=\"showcase\" href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">\n";
 		$content .= "\t\t\t<figure class=\"crop\">\n";
 		$content .= "\t\t\t\t<img src=\"<?php echo base_url();?>{$images[0]}\" style=\"margin-bottom: -120px;\"/>\n";
 		$content .= "\t\t\t</figure>\n";
 		$content .= "\t\t\t<h3>{$judul}</h3>\n";
 		$content .= "\t\t\t<p>{$deskripsi_singkat}</p>\n";
-		$content .= "\t\t</a>\n\t\t".$pointer;
+		$content .= "\t\t</a>\n\t\t<!--".$nama_unik."-->\n\t\t".$pointer;
 
 		$this->changeFile($direktori,$content,$pointer);
 		
+		///5. ubah csv jadi set ke 1
+		$direktori = "resource/csv/karyaPending.csv";
+		$pointer ="0,".$controller.",".$nama_unik;
+		$content ="1,".$controller.",".$nama_unik;
+		$fhandle = fopen($direktori, 'r');
+		$contentFile = fread($fhandle,filesize($direktori)); 
+		$contentFile = str_replace($pointer, $content, $contentFile);
+		$fhandle = fopen($direktori,"w"); 
+		fwrite($fhandle,$contentFile); 
+		fclose($fhandle);
+
 		//load view
 		$data['menu'] = 'daftarKarya';
 		$data['pesan'] = $pesan; //untuk debug only
@@ -251,6 +301,7 @@ class Gallery extends CI_Controller {
 	}
 
 	public function changeFile($direktori,$content,$pointer){
+		$this->protect_admin();
 		chmod($direktori, 0777); 
 		$fhandle = fopen($direktori, 'r');
 		$contentFile = fread($fhandle,filesize($direktori)); 
@@ -288,6 +339,92 @@ class Gallery extends CI_Controller {
 		fclose($fhandle);
 		chmod($direktori, 0644); 
 		
+	}
+
+	public function deleteLineFile($direktori,$pointer){
+		$this->protect_admin();
+		chmod($direktori, 0777); 
+		$fhandle = fopen($direktori, 'r');
+		$contentFile = fread($fhandle,filesize($direktori)); 	
+		$contentFile = preg_replace('/'.$pointer.'([\s\S]*?)'.$pointer.'/', '', $contentFile);	
+		$fhandle = fopen($direktori,"w"); 
+		fwrite($fhandle,$contentFile); 
+		fclose($fhandle);
+		chmod($direktori, 0644); 
+		
+	}
+
+
+	public function hideKarya($nama_unik){
+		$this->protect_admin();
+		//membaca setiap attribute karya dengan nama unik
+		$handle = fopen("resource/csv/karyaPending.csv", "r");
+		if ($handle) {
+		    while (($line = fgets($handle)) !== false) {
+		        // process the line read.
+		         $karya = explode(",", $line);
+		         if($karya[0]=="1" && $karya[2]==$nama_unik){
+		         	$this->hideKaryaNext($karya);
+		         }
+		    }
+		} else {
+		    // error opening the file.
+		} 
+		fclose($handle);
+		
+	}
+
+	public function hideKaryaNext($karya){
+		$this->protect_admin();
+		//inisialisasi variable
+		$controller = $karya[1];
+		$nama_unik = $karya[2];
+		$email = $karya[3];
+		$judul = $karya[4];
+		$tanggal = $karya[5];
+		$video = $karya[6];
+		$deskripsi = $karya[7];
+		$deskripsi_singkat = $karya[8];
+		$tugasApa = $karya[9];
+		$nama_tim = $karya[10];
+		$url = $karya[12];
+		$cp = $karya[13];
+
+		//1. hapus fungsi dr controller sesuai dengan jenis karya
+		$direktori = "application/controllers/".$controller.".php";
+		$pointer ='\/\/'.$nama_unik;
+		$this->deleteLineFile($direktori,$pointer);
+
+		//2. Ubah sidebar diview  sesuai dengan jenis karya
+		$direktori = "application/views/".$controller."/sidebar.php";
+		$pointer ='\<\!\-\-'.$nama_unik.'\-\-\>';
+		$this->deleteLineFile($direktori,$pointer);
+
+		//3 delete template
+		$direktori = "application/views/".$controller."/".$nama_unik.".php";
+		unlink($direktori);
+		
+		//4. delete show case di setiap view sesuai dengan jenis karya
+		$direktori = "application/views/".$controller.".php";
+		$pointer ='\<\!\-\-'.$nama_unik.'\-\-\>';
+		$this->deleteLineFile($direktori,$pointer);
+
+		///5. ubah csv jadi set ke 0
+		$direktori = "resource/csv/karyaPending.csv";
+		$pointer ="1,".$controller.",".$nama_unik;
+		$content ="0,".$controller.",".$nama_unik;
+		$fhandle = fopen($direktori, 'r');
+		$contentFile = fread($fhandle,filesize($direktori)); 
+		$contentFile = str_replace($pointer, $content, $contentFile);
+		$fhandle = fopen($direktori,"w"); 
+		fwrite($fhandle,$contentFile); 
+		fclose($fhandle);
+	}
+
+	public function logout(){
+		$this->load->library('cas');
+    	$this->cas->logout();
+
 	}
 
 }

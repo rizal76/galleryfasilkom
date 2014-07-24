@@ -40,4 +40,9 @@
 			</ul>
 		</nav>
 		</div>
-		<div class="line"></div>
+
+		<div class="line">
+		<?php 
+		if($user!=null) echo "Welcome ".$user->userlogin.", press <a href='gallery/logout'>log out</a> to log out"; 
+		?>
+		</div>

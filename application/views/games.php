@@ -28,23 +28,10 @@
 			<p>Think Thing is a children educational game that introduce many kind of objects around the surrounding.</p>
 		</a>
 
-		<a class="showcase" href="<?php echo site_url('games/think_thing');?>">
-			<figure class="crop">
-				<img src="<?php echo base_url();?>resource/images/Nokia/Think Thing/ss3.jpg" style="margin-bottom: -120px;"/>
-			</figure>
-			<h3>Think Thing</h3>
-			<p>Think Thing is a children educational game that introduce many kind of objects around the surrounding.</p>
-		</a>
+
 		
-		<a class="showcase" href="<?php echo site_url('games/Cekgan');?>">
-			<figure class="crop">
-				<img src="<?php echo base_url();?>" style="margin-bottom: -120px;"/>
-			</figure>
-			<h3>CEk cek</h3>
-			<p>gilaaa</p>
-		</a>
 		<!--new code here-->
-		
+				
 		<!--<div class="line"></div>-->
 		<!--
 		<div class="left">

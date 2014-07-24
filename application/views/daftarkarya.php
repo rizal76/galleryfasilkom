@@ -6,12 +6,12 @@
 
  ?>
 
-<h1><a>Form Register Karya</a></h1>
+		<h1><a>Form Register Karya</a></h1>
 		<form id="form_876345" class="appnitro" enctype="multipart/form-data" method="post" action="<?= base_url() ?>index.php/gallery/addKarya">
 					<div class="form_description">
 			<h2>Untitled Form</h2>
 			<p>This is your form description. Click here to edit.</p>
-		</div>						
+			</div>						
 			<ul >
 			
 					<li id="li_12" >
@@ -44,26 +44,10 @@
 		</li>		<li id="li_4" >
 		<label class="description" for="element_4">Tanggal publish </label>
 		<span>
-			<input id="element_4" name="element_4" class="element text" size="2" maxlength="2" value="" type="text"> /
-			<label for="element_4">DD</label>
+			<input id="element_4" name="element_4" class="element text" size="10" maxlength="210" value="" type="text"> /
+			
 		</span>
-		
-		</span>
-	
-		<span id="calendar_4">
-			<img id="cal_img_4" class="datepicker" src="images/calendar.gif" alt="Pick a date.">	
-		</span>
-		<script type="text/javascript">
-			Calendar.setup({
-			inputField	 : "element_4_3",
-			baseField    : "element_4",
-			displayArea  : "calendar_4",
-			button		 : "cal_img_4",
-			ifFormat	 : "%B %e, %Y",
-			onSelect	 : selectEuropeDate
-			});
-		</script>
-		 
+			 
 		</li>		<li id="li_5" >
 		<label class="description" for="element_5">Link Video </label>
 		<div>
@@ -86,10 +70,22 @@
 			<input id="element_82" name="element_82" class="element file" type="file"/> 
 		</div>  
 		</li>		<li id="li_9" >
+
 		<label class="description" for="element_9">Anggota tim </label>
 		<div>
 			<textarea id="element_9" name="element_9" class="element textarea medium"></textarea> 
 		</div> 
+
+		<label class="description" for="element_91">Submission For</label>
+		<div>
+			<input id="element_91" name="element_91" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div>
+
+		<label class="description" for="element_92">Nama Tim</label>
+		<div>
+			<input id="element_92" name="element_92" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div>
+
 		</li>		<li id="li_10" >
 		<label class="description" for="element_10">More ( URL ) </label>
 		<div>

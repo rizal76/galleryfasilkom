@@ -138,6 +138,8 @@ class Games extends CI_Controller {
 
 	
 
+
+
 //new function here
 
 /* End of file welcome.php */

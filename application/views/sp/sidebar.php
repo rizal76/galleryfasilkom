@@ -15,6 +15,7 @@
 			<li><a <?php if ($sidebar == 'graphbt') { ?> class="current" <?php } ?> href="<?php echo site_url('sp/graphbt');?>">GraphBT<a></li>
 			<li><a <?php if ($sidebar == 'edoocatia') { ?> class="current" <?php } ?> href="<?php echo site_url('sp/edoocatia');?>">Edoocatia<a></li>
 			<li><a <?php if ($sidebar == 'sipkm') { ?> class="current" <?php } ?> href="<?php echo site_url('sp/sipkm');?>">Sistem Informasi Poliklinik<a></li>
+			<!--new code here-->
 		</ul>
 	</nav>
 </div>

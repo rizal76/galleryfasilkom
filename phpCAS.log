@@ -3757,3 +3757,597 @@ AC06 .|    |    <= true
 AC06 .|    |    user was already authenticated, no need to look for tickets [Client.php:1206]
 AC06 .|    <= true
 AC06 .<= true
+DA74 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+DA74 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+DA74 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+DA74 .|    |    Starting a new session [Client.php:792]
+DA74 .|    <= ''
+DA74 .<= ''
+DA74 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+DA74 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+DA74 .<= ''
+DA74 .=> phpCAS::forceAuthentication() [Cas.php:73]
+DA74 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+DA74 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+DA74 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+DA74 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+DA74 .|    |    |    <= true
+DA74 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+DA74 .|    |    <= true
+DA74 .|    |    no need to authenticate [Client.php:1085]
+DA74 .|    <= true
+DA74 .<= ''
+DA74 .=> phpCAS::isAuthenticated() [Cas.php:96]
+DA74 .|    => CAS_Client::isAuthenticated() [CAS.php:1151]
+DA74 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+DA74 .|    |    |    user = `muhamad.rizal' [Client.php:1365]
+DA74 .|    |    <= true
+DA74 .|    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+DA74 .|    <= true
+DA74 .<= true
+D16C .START phpCAS-1.3.2 ****************** [CAS.php:450]
+D16C .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+D16C .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+D16C .|    |    Starting a new session [Client.php:792]
+D16C .|    <= ''
+D16C .<= ''
+D16C .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+D16C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+D16C .<= ''
+D16C .=> phpCAS::forceAuthentication() [Cas.php:81]
+D16C .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D16C .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D16C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D16C .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D16C .|    |    |    <= true
+D16C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D16C .|    |    <= true
+D16C .|    |    no need to authenticate [Client.php:1085]
+D16C .|    <= true
+D16C .<= ''
+2ACA .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2ACA .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+2ACA .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+2ACA .|    |    Starting a new session [Client.php:792]
+2ACA .|    <= ''
+2ACA .<= ''
+2ACA .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+2ACA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2ACA .<= ''
+2ACA .=> phpCAS::forceAuthentication() [Cas.php:81]
+2ACA .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2ACA .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2ACA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2ACA .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+2ACA .|    |    |    <= true
+2ACA .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+2ACA .|    |    <= true
+2ACA .|    |    no need to authenticate [Client.php:1085]
+2ACA .|    <= true
+2ACA .<= ''
+4E35 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+4E35 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+4E35 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+4E35 .|    |    Starting a new session [Client.php:792]
+4E35 .|    <= ''
+4E35 .<= ''
+4E35 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+4E35 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+4E35 .<= ''
+4E35 .=> phpCAS::forceAuthentication() [Cas.php:81]
+4E35 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+4E35 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+4E35 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+4E35 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+4E35 .|    |    |    <= true
+4E35 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+4E35 .|    |    <= true
+4E35 .|    |    no need to authenticate [Client.php:1085]
+4E35 .|    <= true
+4E35 .<= ''
+F69C .START phpCAS-1.3.2 ****************** [CAS.php:450]
+F69C .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+F69C .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+F69C .|    |    Starting a new session [Client.php:792]
+F69C .|    <= ''
+F69C .<= ''
+F69C .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+F69C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+F69C .<= ''
+F69C .=> phpCAS::forceAuthentication() [Cas.php:81]
+F69C .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+F69C .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+F69C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+F69C .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+F69C .|    |    |    <= true
+F69C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+F69C .|    |    <= true
+F69C .|    |    no need to authenticate [Client.php:1085]
+F69C .|    <= true
+F69C .<= ''
+E508 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+E508 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+E508 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+E508 .|    |    Starting a new session [Client.php:792]
+E508 .|    <= ''
+E508 .<= ''
+E508 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+E508 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+E508 .<= ''
+E508 .=> phpCAS::forceAuthentication() [Cas.php:81]
+E508 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+E508 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+E508 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+E508 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+E508 .|    |    |    <= true
+E508 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+E508 .|    |    <= true
+E508 .|    |    no need to authenticate [Client.php:1085]
+E508 .|    <= true
+E508 .<= ''
+966A .START phpCAS-1.3.2 ****************** [CAS.php:450]
+966A .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+966A .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+966A .|    |    Starting a new session [Client.php:792]
+966A .|    <= ''
+966A .<= ''
+966A .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+966A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+966A .=> phpCAS::forceAuthentication() [Cas.php:81]
+966A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+966A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+966A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+966A .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+966A .|    |    |    <= true
+966A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+966A .|    |    <= true
+966A .|    |    no need to authenticate [Client.php:1085]
+966A .|    <= true
+966A .<= ''
+7EBA .START phpCAS-1.3.2 ****************** [CAS.php:450]
+7EBA .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+7EBA .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+7EBA .|    |    Starting a new session [Client.php:792]
+7EBA .|    <= ''
+7EBA .<= ''
+7EBA .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+7EBA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+7EBA .<= ''
+7EBA .=> phpCAS::forceAuthentication() [Cas.php:81]
+7EBA .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+7EBA .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+7EBA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+7EBA .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+7EBA .|    |    |    <= true
+7EBA .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+7EBA .|    |    <= true
+7EBA .|    |    no need to authenticate [Client.php:1085]
+7EBA .|    <= true
+7EBA .<= ''
+7CF0 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+7CF0 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+7CF0 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+7CF0 .|    |    Starting a new session [Client.php:792]
+7CF0 .|    <= ''
+7CF0 .<= ''
+7CF0 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+7CF0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+7CF0 .<= ''
+7CF0 .=> phpCAS::forceAuthentication() [Cas.php:81]
+7CF0 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+7CF0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+7CF0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+7CF0 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+7CF0 .|    |    |    <= true
+7CF0 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+7CF0 .|    |    <= true
+7CF0 .|    |    no need to authenticate [Client.php:1085]
+7CF0 .|    <= true
+7CF0 .<= ''
+C3D8 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+C3D8 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+C3D8 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+C3D8 .|    |    Starting a new session [Client.php:792]
+C3D8 .|    <= ''
+C3D8 .<= ''
+C3D8 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+C3D8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+C3D8 .<= ''
+C3D8 .=> phpCAS::forceAuthentication() [Cas.php:81]
+C3D8 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+C3D8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+C3D8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+C3D8 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+C3D8 .|    |    |    <= true
+C3D8 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+C3D8 .|    |    <= true
+C3D8 .|    |    no need to authenticate [Client.php:1085]
+C3D8 .|    <= true
+C3D8 .<= ''
+D997 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+D997 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+D997 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+D997 .|    |    Starting a new session [Client.php:792]
+D997 .|    <= ''
+D997 .<= ''
+D997 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+D997 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+D997 .<= ''
+D997 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D997 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D997 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D997 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D997 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D997 .|    |    |    <= true
+D997 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D997 .|    |    <= true
+D997 .|    |    no need to authenticate [Client.php:1085]
+D997 .|    <= true
+D997 .<= ''
+3CA3 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+3CA3 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+3CA3 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+3CA3 .|    |    Starting a new session [Client.php:792]
+3CA3 .|    <= ''
+3CA3 .<= ''
+3CA3 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+3CA3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+3CA3 .<= ''
+3CA3 .=> phpCAS::forceAuthentication() [Cas.php:81]
+3CA3 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+3CA3 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+3CA3 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+3CA3 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+3CA3 .|    |    |    <= true
+3CA3 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+3CA3 .|    |    <= true
+3CA3 .|    |    no need to authenticate [Client.php:1085]
+3CA3 .|    <= true
+3CA3 .<= ''
+A435 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+A435 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+A435 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+A435 .|    |    Starting a new session [Client.php:792]
+A435 .|    <= ''
+A435 .<= ''
+A435 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+A435 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+A435 .<= ''
+A435 .=> phpCAS::forceAuthentication() [Cas.php:81]
+A435 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+A435 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+A435 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+A435 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+A435 .|    |    |    <= true
+A435 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+A435 .|    |    <= true
+A435 .|    |    no need to authenticate [Client.php:1085]
+A435 .|    <= true
+A435 .<= ''
+D098 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+D098 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+D098 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+D098 .|    |    Starting a new session [Client.php:792]
+D098 .|    <= ''
+D098 .<= ''
+D098 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+D098 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+D098 .<= ''
+D098 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D098 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D098 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D098 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D098 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D098 .|    |    |    <= true
+D098 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D098 .|    |    <= true
+D098 .|    |    no need to authenticate [Client.php:1085]
+D098 .|    <= true
+D098 .<= ''
+D098 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D098 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D098 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D098 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D098 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D098 .|    |    |    <= true
+D098 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D098 .|    |    <= true
+D098 .|    |    no need to authenticate [Client.php:1085]
+D098 .|    <= true
+D098 .<= ''
+D098 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D098 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D098 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D098 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D098 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D098 .|    |    |    <= true
+D098 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D098 .|    |    <= true
+D098 .|    |    no need to authenticate [Client.php:1085]
+D098 .|    <= true
+D098 .<= ''
+D098 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D098 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D098 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D098 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D098 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D098 .|    |    |    <= true
+D098 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D098 .|    |    <= true
+D098 .|    |    no need to authenticate [Client.php:1085]
+D098 .|    <= true
+D098 .<= ''
+D098 .=> phpCAS::forceAuthentication() [Cas.php:81]
+D098 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D098 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D098 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D098 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+D098 .|    |    |    <= true
+D098 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+D098 .|    |    <= true
+D098 .|    |    no need to authenticate [Client.php:1085]
+D098 .|    <= true
+D098 .<= ''
+CF25 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+CF25 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+CF25 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+CF25 .|    |    Starting a new session [Client.php:792]
+CF25 .|    <= ''
+CF25 .<= ''
+CF25 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+CF25 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+CF25 .<= ''
+CF25 .=> phpCAS::forceAuthentication() [Cas.php:81]
+CF25 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+CF25 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+CF25 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+CF25 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+CF25 .|    |    |    <= true
+CF25 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+CF25 .|    |    <= true
+CF25 .|    |    no need to authenticate [Client.php:1085]
+CF25 .|    <= true
+CF25 .<= ''
+AA49 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+AA49 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+AA49 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+AA49 .|    |    Starting a new session [Client.php:792]
+AA49 .|    <= ''
+AA49 .<= ''
+AA49 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+AA49 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+AA49 .=> phpCAS::forceAuthentication() [Cas.php:81]
+AA49 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AA49 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AA49 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AA49 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+AA49 .|    |    |    <= true
+AA49 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+AA49 .|    |    <= true
+AA49 .|    |    no need to authenticate [Client.php:1085]
+AA49 .|    <= true
+AA49 .<= ''
+4471 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+4471 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+4471 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+4471 .|    |    Starting a new session [Client.php:792]
+4471 .|    <= ''
+4471 .<= ''
+4471 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+4471 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+4471 .<= ''
+4471 .=> phpCAS::forceAuthentication() [Cas.php:81]
+4471 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+4471 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+4471 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+4471 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+4471 .|    |    |    <= true
+4471 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+4471 .|    |    <= true
+4471 .|    |    no need to authenticate [Client.php:1085]
+4471 .|    <= true
+4471 .<= ''
+71ED .START phpCAS-1.3.2 ****************** [CAS.php:450]
+71ED .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+71ED .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+71ED .|    |    Starting a new session [Client.php:792]
+71ED .|    <= ''
+71ED .<= ''
+71ED .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+71ED .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+71ED .<= ''
+71ED .=> phpCAS::forceAuthentication() [Cas.php:81]
+71ED .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+71ED .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+71ED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+71ED .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+71ED .|    |    |    <= true
+71ED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+71ED .|    |    <= true
+71ED .|    |    no need to authenticate [Client.php:1085]
+71ED .|    <= true
+71ED .<= ''
+71ED .=> phpCAS::forceAuthentication() [Cas.php:81]
+71ED .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+71ED .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+71ED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+71ED .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+71ED .|    |    |    <= true
+71ED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+71ED .|    |    <= true
+71ED .|    |    no need to authenticate [Client.php:1085]
+71ED .|    <= true
+71ED .<= ''
+71ED .=> phpCAS::forceAuthentication() [Cas.php:81]
+71ED .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+71ED .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+71ED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+71ED .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+71ED .|    |    |    <= true
+71ED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+71ED .|    |    <= true
+71ED .|    |    no need to authenticate [Client.php:1085]
+71ED .|    <= true
+71ED .<= ''
+71ED .=> phpCAS::forceAuthentication() [Cas.php:81]
+71ED .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+71ED .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+71ED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+71ED .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+71ED .|    |    |    <= true
+71ED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+71ED .|    |    <= true
+71ED .|    |    no need to authenticate [Client.php:1085]
+71ED .|    <= true
+71ED .<= ''
+71ED .=> phpCAS::forceAuthentication() [Cas.php:81]
+71ED .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+71ED .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+71ED .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+71ED .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+71ED .|    |    |    <= true
+71ED .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+71ED .|    |    <= true
+71ED .|    |    no need to authenticate [Client.php:1085]
+71ED .|    <= true
+71ED .<= ''
+90C9 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+90C9 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+90C9 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+90C9 .|    |    Starting a new session [Client.php:792]
+90C9 .|    <= ''
+90C9 .<= ''
+90C9 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+90C9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+90C9 .<= ''
+90C9 .=> phpCAS::forceAuthentication() [Cas.php:73]
+90C9 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+90C9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+90C9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+90C9 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+90C9 .|    |    |    <= true
+90C9 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+90C9 .|    |    <= true
+90C9 .|    |    no need to authenticate [Client.php:1085]
+90C9 .|    <= true
+90C9 .<= ''
+90C9 .=> phpCAS::isAuthenticated() [Cas.php:96]
+90C9 .|    => CAS_Client::isAuthenticated() [CAS.php:1151]
+90C9 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+90C9 .|    |    |    user = `muhamad.rizal' [Client.php:1365]
+90C9 .|    |    <= true
+90C9 .|    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+90C9 .|    <= true
+90C9 .<= true

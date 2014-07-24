@@ -30,6 +30,7 @@
 			<li><a <?php if ($sidebar == 'remoqte') { ?> class="current" <?php } ?> href="<?php echo site_url('apps/remoqte');?>">remoQte<a></li>
 			<li><a <?php if ($sidebar == 'hanwrite') { ?> class="current" <?php } ?> href="<?php echo site_url('apps/hanwrite');?>">HanWrite<a></li>
 			<li><a <?php if ($sidebar == 'sterile_inbox') { ?> class="current" <?php } ?> href="<?php echo site_url('apps/sterile_inbox');?>">Sterile Inbox<a></li>
+			<!--new code here-->
 		</ul>
 	</nav>
 </div>

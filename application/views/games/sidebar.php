@@ -8,6 +8,7 @@
 			<li><a <?php if ($sidebar == 'think_thing') { ?> class="current" <?php } ?> href="<?php echo site_url('games/think_thing');?>">Think Thing</a></li>
 			<li><a <?php if ($sidebar == 'world_word_challenge') { ?> class="current" <?php } ?> href="<?php echo site_url('games/world_word_challenge');?>">World Word Challenge</a></li>
 			
+			
 			<!--new code here-->
 		</ul>
 	</nav>

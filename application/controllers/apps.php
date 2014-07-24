@@ -370,6 +370,8 @@ class Apps extends CI_Controller {
 		$this->load->view('apps/sidebar');
 		$this->load->view('footer');
 	}
+
+	//new function here
 	
 }
 

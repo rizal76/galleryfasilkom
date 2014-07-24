@@ -42,7 +42,10 @@
 		</div>
 
 		<div class="line">
-		<?php 
-		if($user!=null) echo "Welcome ".$user->userlogin.", press <a href='gallery/logout'>log out</a> to log out"; 
+		<?php
+		if(isset($user)){ 
+			if($user!=null) echo "Welcome ".$user->userlogin.", press <a href='gallery/logout'>log out</a> to log out"; 
+		}
+
 		?>
 		</div>

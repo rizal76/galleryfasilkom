@@ -76,6 +76,8 @@ class BI extends CI_Controller {
 		$this->load->view('sidebar',$data);
 		$this->load->view('footer');
 	}
+
+	//new function here
 }
 
 /* End of file welcome.php */

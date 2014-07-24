@@ -83,6 +83,22 @@ class Gallery extends CI_Controller {
 		
 		$this->protect_admin();
 		$data['admin']='admin';
+		
+		//get all data from csv
+		$list= array();
+		$handle = fopen("resource/csv/karyaPending.csv", "r");
+		if ($handle) {
+			$i=0;
+		    while (($line = fgets($handle)) !== false) {
+		        // process the line read.
+		         $karya = explode(",", $line);
+		         $list[$i] = $karya;
+		         $i++;
+		    }
+		} 
+		fclose($handle);
+		$data['list']=$list;
+		$data['menu']= 'admin';
 		$this->load->view('header', $data);
 		$this->load->view('admin', $data);
 		$this->load->view('footer');
@@ -228,11 +244,12 @@ class Gallery extends CI_Controller {
 		$this->changeFile($direktori,$content,$pointer);
 		
 		//2. Ubah sidebar diview  sesuai dengan jenis karya
-		$direktori = "application/views/".$controller."/sidebar.php";
-		$pointer ="<!--new code here-->";
-		$content = "<!--".$nama_unik."-->\n\t\t\t<li><a <?php if (\$sidebar == '{$nama_unik}') { ?> class=\"current\" <?php } ?> href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">{$judul}<a></li>\n\t\t\t<!--".$nama_unik."-->\n\t\t\t".$pointer;
-		$this->changeFile($direktori,$content,$pointer);
-		
+		if($controller!="bi"){
+			$direktori = "application/views/".$controller."/sidebar.php";
+			$pointer ="<!--new code here-->";
+			$content = "<!--".$nama_unik."-->\n\t\t\t<li><a <?php if (\$sidebar == '{$nama_unik}') { ?> class=\"current\" <?php } ?> href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">{$judul}<a></li>\n\t\t\t<!--".$nama_unik."-->\n\t\t\t".$pointer;
+			$this->changeFile($direktori,$content,$pointer);
+		}
 		//3.  Buat view dari template
 		$file_template = 'application/views/template.php';
 		$direktori = "application/views/".$controller."/".$nama_unik.".php";
@@ -268,17 +285,29 @@ class Gallery extends CI_Controller {
 
 
 		//4. add show case di setiap view sesuai dengan jenis karya
-		$direktori = "application/views/".$controller.".php";
-		$pointer ="<!--new code here-->";
-		$content = "<!--".$nama_unik."-->\n\t\t<a class=\"showcase\" href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">\n";
-		$content .= "\t\t\t<figure class=\"crop\">\n";
-		$content .= "\t\t\t\t<img src=\"<?php echo base_url();?>{$images[0]}\" style=\"margin-bottom: -120px;\"/>\n";
-		$content .= "\t\t\t</figure>\n";
-		$content .= "\t\t\t<h3>{$judul}</h3>\n";
-		$content .= "\t\t\t<p>{$deskripsi_singkat}</p>\n";
-		$content .= "\t\t</a>\n\t\t<!--".$nama_unik."-->\n\t\t".$pointer;
+		$direktori ="";
+		if($controller=="sp") {
+			$direktori = "application/views/student_project.php";
+		}else if($controller=="bi"){
+			$direktori = "application/views/business_incubator.php";
+			$pointer ="<!--new code here-->";
+			$content = "<!--".$nama_unik."--><div class=\"wrapper p3\"><figure class=\"img-indent\"><img src=\"<?php echo base_url();?>resource/images/saas/icon.gif\" width=\"100px\";/></figure><div class=\"extra-wrap\"><h2>{$judul}</h2><p class=\"p1\">{$deskripsi_singkat}</p><a class=\"button-2\" href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">Read More</a><div></div>";
+			$content .= "<!--".$nama_unik."-->\n\t\t".$pointer;
+			$this->changeFile($direktori,$content,$pointer);
+		}
+		else{
+			$direktori = "application/views/".$controller.".php";
+			$pointer ="<!--new code here-->";
+			$content = "<!--".$nama_unik."-->\n\t\t<a class=\"showcase\" href=\"<?php echo site_url('{$controller}/{$nama_unik}');?>\">\n";
+			$content .= "\t\t\t<figure class=\"crop\">\n";
+			$content .= "\t\t\t\t<img src=\"<?php echo base_url();?>{$images[0]}\" style=\"margin-bottom: -120px;\"/>\n";
+			$content .= "\t\t\t</figure>\n";
+			$content .= "\t\t\t<h3>{$judul}</h3>\n";
+			$content .= "\t\t\t<p>{$deskripsi_singkat}</p>\n";
+			$content .= "\t\t</a>\n\t\t<!--".$nama_unik."-->\n\t\t".$pointer;
 
-		$this->changeFile($direktori,$content,$pointer);
+			$this->changeFile($direktori,$content,$pointer);
+	   }
 		
 		///5. ubah csv jadi set ke 1
 		$direktori = "resource/csv/karyaPending.csv";
@@ -292,10 +321,10 @@ class Gallery extends CI_Controller {
 		fclose($fhandle);
 
 		//load view
-		$data['menu'] = 'daftarKarya';
+		$data['menu'] = 'admin';
 		$data['pesan'] = $pesan; //untuk debug only
 		$this->load->view('header', $data);
-		$this->load->view('daftarkarya', $data);
+		$this->load->view('admin', $data);
 		$this->load->view('footer');
 
 	}
@@ -396,16 +425,22 @@ class Gallery extends CI_Controller {
 		$this->deleteLineFile($direktori,$pointer);
 
 		//2. Ubah sidebar diview  sesuai dengan jenis karya
-		$direktori = "application/views/".$controller."/sidebar.php";
-		$pointer ='\<\!\-\-'.$nama_unik.'\-\-\>';
-		$this->deleteLineFile($direktori,$pointer);
+		if($controller!="bi"){
+			$direktori = "application/views/".$controller."/sidebar.php";
+			$pointer ='\<\!\-\-'.$nama_unik.'\-\-\>';
+			$this->deleteLineFile($direktori,$pointer);
+		}
 
 		//3 delete template
 		$direktori = "application/views/".$controller."/".$nama_unik.".php";
 		unlink($direktori);
 		
 		//4. delete show case di setiap view sesuai dengan jenis karya
-		$direktori = "application/views/".$controller.".php";
+		$direktori ="";
+		if($controller=="sp")
+			$direktori = "application/views/student_project.php";
+		else
+			$direktori = "application/views/".$controller.".php";
 		$pointer ='\<\!\-\-'.$nama_unik.'\-\-\>';
 		$this->deleteLineFile($direktori,$pointer);
 
@@ -419,6 +454,13 @@ class Gallery extends CI_Controller {
 		$fhandle = fopen($direktori,"w"); 
 		fwrite($fhandle,$contentFile); 
 		fclose($fhandle);
+
+		//load view
+		$data['menu'] = 'admin';
+		$this->load->view('header', $data);
+		$this->load->view('admin', $data);
+		$this->load->view('footer');
+
 	}
 
 	public function logout(){

@@ -4391,3 +4391,222 @@ ABDE .<= ''
 8859 .|    |    no need to authenticate [Client.php:1085]
 8859 .|    <= true
 8859 .<= ''
+AC07 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+AC07 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+AC07 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+AC07 .|    |    Starting a new session [Client.php:792]
+AC07 .|    <= ''
+AC07 .<= ''
+AC07 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+AC07 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+AC07 .<= ''
+AC07 .=> phpCAS::forceAuthentication() [Cas.php:73]
+AC07 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+AC07 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+AC07 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+AC07 .|    |    |    |    no user found [Client.php:1375]
+AC07 .|    |    |    <= false
+AC07 .|    |    |    no ticket found [Client.php:1258]
+AC07 .|    |    <= false
+AC07 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+AC07 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+AC07 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+AC07 .|    |    |    |    |    Final URI: http://localhost/galleryfasilkom/ [Client.php:3071]
+AC07 .|    |    |    |    <= 'http://localhost/galleryfasilkom/'
+AC07 .|    |    |    <= 'https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Fgalleryfasilkom%2F'
+AC07 .|    |    |    Redirect to : https://sso.ui.ac.id/cas2/login?service=http%3A%2F%2Flocalhost%2Fgalleryfasilkom%2F [Client.php:1402]
+AC07 .|    |    |    exit()
+AC07 .|    |    |    -
+AC07 .|    |    -
+AC07 .|    -
+2F1A .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2F1A .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+2F1A .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+2F1A .|    |    Starting a new session [Client.php:792]
+2F1A .|    |    Ticket 'ST-67-0yI0WUrD2q0YDFcHljvY-sso.ui.ac.id' found [Client.php:870]
+2F1A .|    <= ''
+2F1A .<= ''
+2F1A .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+2F1A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2F1A .<= ''
+2F1A .=> phpCAS::forceAuthentication() [Cas.php:73]
+2F1A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2F1A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2F1A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2F1A .|    |    |    |    no user found [Client.php:1375]
+2F1A .|    |    |    <= false
+2F1A .|    |    |    CAS 2.0 ticket `ST-67-0yI0WUrD2q0YDFcHljvY-sso.ui.ac.id' is present [Client.php:1223]
+2F1A .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL) [Client.php:1224]
+2F1A .|    |    |    |     [Client.php:2747]
+2F1A .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:2753]
+2F1A .|    |    |    |    |    => CAS_Client::getURL() [Client.php:417]
+2F1A .|    |    |    |    |    |    Final URI: http://localhost/galleryfasilkom/ [Client.php:3071]
+2F1A .|    |    |    |    |    <= 'http://localhost/galleryfasilkom/'
+2F1A .|    |    |    |    <= 'https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Fgalleryfasilkom%2F'
+2F1A .|    |    |    |    => CAS_Client::_readURL('https://sso.ui.ac.id/cas2/serviceValidate?service=http%3A%2F%2Flocalhost%2Fgalleryfasilkom%2F&ticket=ST-67-0yI0WUrD2q0YDFcHljvY-sso.ui.ac.id', NULL, NULL, NULL) [Client.php:2762]
+2F1A .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:220]
+2F1A .|    |    |    |    |    |    Response Body: 
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+2F1A .|    |    |    |    |    |    	<cas:authenticationSuccess>
+2F1A .|    |    |    |    |    |    		<cas:user>muhamad.rizal</cas:user>
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    		<cas:attributes>
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:ldap_kodeOrg>xx.xx.06.00.12.01:mahasiswa</cas:ldap_kodeOrg>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:email_luar>indrabayu.rizal@gmail.com</cas:email_luar>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:ldap_cn>MUHAMAD RIZAL INDRABAYU</cas:ldap_cn>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				
+2F1A .|    |    |    |    |    |                                      <cas:status_mahasiswa>Kosong</cas:status_mahasiswa> 
+2F1A .|    |    |    |    |    |    				
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:ldap_kodeIdentitas>1106014526</cas:ldap_kodeIdentitas>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:nama_org>Sistem Informasi</cas:nama_org>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				
+2F1A .|    |    |    |    |    |                                      <cas:kd_org>06.00.12.01</cas:kd_org> 
+2F1A .|    |    |    |    |    |    				
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:nama>MUHAMAD RIZAL INDRABAYU</cas:nama>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    				<cas:npm>1106014526</cas:npm>
+2F1A .|    |    |    |    |    |    			   
+2F1A .|    |    |    |    |    |    			
+2F1A .|    |    |    |    |    |    		    
+2F1A .|    |    |    |    |    |    		</cas:attributes>
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |    	</cas:authenticationSuccess>
+2F1A .|    |    |    |    |    |    </cas:serviceResponse>
+2F1A .|    |    |    |    |    |    
+2F1A .|    |    |    |    |    |     [CurlRequest.php:82]
+2F1A .|    |    |    |    |    <= true
+2F1A .|    |    |    |    <= true
+2F1A .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:2813]
+2F1A .|    |    |    |    |    Found nested jasig style attributes [Client.php:2898]
+2F1A .|    |    |    |    |    Attribute [ldap_kodeOrg] = xx.xx.06.00.12.01:mahasiswa [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [email_luar] = indrabayu.rizal@gmail.com [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [ldap_cn] = MUHAMAD RIZAL INDRABAYU [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [status_mahasiswa] = Kosong [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [ldap_kodeIdentitas] = 1106014526 [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [nama_org] = Sistem Informasi [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [kd_org] = 06.00.12.01 [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [nama] = MUHAMAD RIZAL INDRABAYU [Client.php:2902]
+2F1A .|    |    |    |    |    Attribute [npm] = 1106014526 [Client.php:2902]
+2F1A .|    |    |    |    <= ''
+2F1A .|    |    |    |    Storing Proxy List [Client.php:2822]
+2F1A .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:2825]
+2F1A .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+2F1A .|    |    |    |    <= true
+2F1A .|    |    |    |    => CAS_Client::_renameSession('ST-67-0yI0WUrD2q0YDFcHljvY-sso.ui.ac.id') [Client.php:2856]
+2F1A .|    |    |    |    |    Session ID: ST-67-0yI0WUrD2q0YDFcHljvY-ssouiacid [Client.php:3180]
+2F1A .|    |    |    |    |    Restoring old session vars [Client.php:3183]
+2F1A .|    |    |    |    <= ''
+2F1A .|    |    |    <= true
+2F1A .|    |    |    CAS 2.0 ticket `ST-67-0yI0WUrD2q0YDFcHljvY-sso.ui.ac.id' was validated [Client.php:1225]
+2F1A .|    |    |    => CAS_Client::getURL() [Client.php:1279]
+2F1A .|    |    |    <= 'http://localhost/galleryfasilkom/'
+2F1A .|    |    |    Prepare redirect to : http://localhost/galleryfasilkom/ [Client.php:1279]
+2F1A .|    |    |    => CAS_Client::getURL() [Client.php:1280]
+2F1A .|    |    |    <= 'http://localhost/galleryfasilkom/'
+2F1A .|    |    |    exit()
+2F1A .|    |    |    -
+2F1A .|    |    -
+2F1A .|    -
+7C30 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+7C30 .=> phpCAS::client('2.0', 'sso.ui.ac.id', 443, '/cas2') [Cas.php:54]
+7C30 .|    => CAS_Client::__construct('2.0', false, 'sso.ui.ac.id', 443, '/cas2', true) [CAS.php:347]
+7C30 .|    |    Starting a new session [Client.php:792]
+7C30 .|    <= ''
+7C30 .<= ''
+7C30 .=> phpCAS::setNoCasServerValidation() [Cas.php:58]
+7C30 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+7C30 .<= ''
+7C30 .=> phpCAS::forceAuthentication() [Cas.php:73]
+7C30 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+7C30 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+7C30 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+7C30 .|    |    |    |    user = `muhamad.rizal' [Client.php:1365]
+7C30 .|    |    |    <= true
+7C30 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+7C30 .|    |    <= true
+7C30 .|    |    no need to authenticate [Client.php:1085]
+7C30 .|    <= true
+7C30 .<= ''
+7C30 .=> phpCAS::isAuthenticated() [Cas.php:96]
+7C30 .|    => CAS_Client::isAuthenticated() [CAS.php:1151]
+7C30 .|    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+7C30 .|    |    |    user = `muhamad.rizal' [Client.php:1365]
+7C30 .|    |    <= true
+7C30 .|    |    user was already authenticated, no need to look for tickets [Client.php:1206]
+7C30 .|    <= true
+7C30 .<= true
